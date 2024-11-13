@@ -1,0 +1,56 @@
+Findings from reading by different readers in Python:
+1.	hmnist_28_28_RGB.csv:
+o	Pandas: 3.10 segundos
+o	Dask: 5.32 segundos
+o	Modin: 6.69 segundos
+o	Ray: 80.87 segundos
+2.	hmnist_28_28_L.csv:
+o	Pandas: 2.84 segundos
+o	Dask: 1.14 segundos
+o	Modin: 1.11 segundos
+o	Ray: 7.46 segundos
+3.	hmnist_8_8_RGB.csv:
+o	Pandas: 1.50 segundos
+o	Dask: 0.29 segundos
+o	Modin: 0.32 segundos
+o	Ray: 0.69 segundos
+4.	hmnist_8_8_L.csv:
+o	Pandas: 1.13 segundos
+o	Dask: 0.09 segundos
+o	Modin: 0.12 segundos
+o	Ray: 0.38 segundos
+5.	HAM10000_metadata.csv:
+o	Pandas: 0.99 segundos
+o	Dask: 0.08 segundos
+o	Modin: 0.08 segundos
+o	Ray: 0.39 segundos
+Observations: • Ray is significantly slower compared to pandas, dask, and modin, especially with larger files. 
+• Dask and modin show faster reading times compared to pandas for smaller files. 
+• Ray is especially slow with larger files, such as hmnist_28_28_RGB.csv. These reading times can vary depending on your environment's configuration and the available resources (such as memory and processing power). If you're looking for speed and efficiency, it seems that dask and modin are faster options than ray for the files you're working with.
+
+Numbers the columns:
+Summary for file /content/drive/My Drive/pasantia/hmnist_28_28_RGB.csv:
+
+Total number of rows: 10,015
+Total number of columns: 7
+File size (MB): 0.07
+Summary for file /content/drive/My Drive/pasantia/hmnist_28_28_L.csv:
+
+Total number of rows: 10,015
+Total number of columns: 7
+File size (MB): 0.07
+Summary for file /content/drive/My Drive/pasantia/hmnist_8_8_RGB.csv:
+
+Total number of rows: 10,015
+Total number of columns: 7
+File size (MB): 0.07
+Summary for file /content/drive/My Drive/pasantia/hmnist_8_8_L.csv:
+
+Total number of rows: 10,015
+Total number of columns: 7
+File size (MB): 0.07
+Summary for file /content/drive/My Drive/pasantia/HAM10000_metadata.csv:
+
+Total number of rows: 10,015
+Total number of columns: 7
+File size (MB): 0.07
